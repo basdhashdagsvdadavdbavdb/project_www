@@ -19,7 +19,11 @@ header{
     }
 
     h1 {
-        font-size: 4em;
+        font-size: 4rem;
+        @media screen and (min-width: 1200px) {
+            font-size: 6rem;
+            
+        }
     }
 
 
@@ -30,16 +34,28 @@ header{
 
 .content{
     position: absolute;
+    padding: 40px;
 
     a {
-        display: block;
-        width: 15px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
         padding: 15px;
         background-color: #265902;
         border-radius: 6px;
         font-size: 140%;
-        text-align: center;
         margin-top: 50px;
+        transition: 0.5s;
+        &:hover {
+            background-color: #265902a4;
+            transform: translateY(-10px);
+        }
+        span{
+            flex-basis: 20%;
+            padding-left: 10px;
+        }
+        
     }
 }
 
